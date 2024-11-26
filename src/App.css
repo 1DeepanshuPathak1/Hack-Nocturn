@@ -26,7 +26,6 @@ body {
   position: relative;
 }
 
-/* Particles Background */
 #tsparticles {
   position: fixed;
   top: 0;
@@ -36,15 +35,13 @@ body {
   z-index: 0;
 }
 
-/* Main Content Container */
 main {
   position: relative;
   left: 35%;
   z-index: 1;
-  padding-top: 70px; /* Add space for fixed navbar */
+  padding-top: 70px; 
 }
 
-/* Glass Effect */
 .glass {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -60,10 +57,10 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius:20px;
   padding: 2rem;
-  margin: 2rem auto; /* Center cards horizontally */
-  max-width: 900px; /* Maximum width for content */
+  margin: 2rem auto; 
+  max-width: 900px; 
   max-height: 200px;
-  width: 90%; /* Responsive width */
+  width: 90%;
   display: flex;
   height: auto;
   flex-direction: column;
@@ -71,7 +68,6 @@ main {
   align-items: center;
 }
 
-/* Navbar Styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -108,7 +104,6 @@ main {
   color: var(--text-secondary);
 }
 
-/* Hero Section */
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -157,7 +152,6 @@ main {
   color: var(--primary-bg);
 }
 
-/* About Section */
 .about-section {
   padding: 5rem 2rem;
   position: relative;
@@ -175,7 +169,6 @@ main {
   transition: transform 0.3s ease;
 }
 
-/* FAQ Section */
 .faq-section {
   padding: 5rem 2rem;
   position: relative;
@@ -192,7 +185,6 @@ main {
   padding: 2rem;
 }
 
-/* Sponsors Section */
 .sponsors-section {
   padding: 5rem 2rem;
   position: relative;
@@ -216,7 +208,6 @@ main {
   height: auto;
 }
 
-/* Social Media Section */
 .social-section {
   padding: 5rem 2rem;
   position: relative;
@@ -237,7 +228,6 @@ main {
   transition: all 0.3s ease;
 }
 
-/* Contact Section */
 .contact-section {
   padding: 5rem 2rem;
   position: relative;
@@ -249,7 +239,6 @@ main {
   padding: 2rem;
 }
 
-/* General Styles */
 h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
@@ -265,7 +254,6 @@ section {
   width: 100%;
 }
 
-/* Animations */
 @keyframes glitch {
   0% {
     text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
@@ -297,7 +285,6 @@ section {
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
