@@ -75,8 +75,6 @@ main {
   width: 100%;
   padding: 1rem 2rem;
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   background: rgba(18, 18, 18, 0.8);
   backdrop-filter: blur(10px);
@@ -90,7 +88,6 @@ main {
 }
 
 .nav-links {
-  display: flex;
   gap: 2rem;
 }
 
@@ -288,6 +285,10 @@ section {
 @media (max-width: 768px) {
   .nav-links {
     display: none;
+  }
+
+  #tsparticles {
+    width: 50%;
   }
   
   .glitch {
