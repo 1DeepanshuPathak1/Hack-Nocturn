@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./App.css";
@@ -10,7 +9,6 @@ import { HomeSection } from "./Sections/HomeSection"
 import { AboutSection } from "./Sections/AboutSection";
 import { FaqSection } from "./Sections/FaqSection";
 import { SponsorsSection } from "./Sections/SponsorSection";
-import { SocialMediaSection } from "./Sections/SocialMediaSection";
 import { ContactSection } from "./Sections/ContactSection";
 import { NavBar } from "./Navbar";
 
@@ -78,7 +76,6 @@ function App() {
         <AboutSection />
         <FaqSection />
         <SponsorsSection />
-        <SocialMediaSection />
         <ContactSection />
       </main>
     </div>
@@ -94,8 +91,6 @@ AboutSection;
 FaqSection;
 
 SponsorsSection;
-
-SocialMediaSection;
 
 ContactSection;
 

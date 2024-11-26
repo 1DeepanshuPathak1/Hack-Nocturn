@@ -1,16 +1,42 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+
 function ContactSection() {
     return (
-      <section id="contact" className="contact-section glass-card">
-        <h2 data-aos="fade-up">Get in Touch</h2>
-        <div className="contact-content glass" data-aos="fade-up">
-          <div className="contact-info">
-            <p>📧 hackonauts@example.com</p>
-            <p>📱 +1234567890</p>
-            <p>📍 Sir M Visvesvaraya Institute of Technology, Bangalore</p>
-          </div>
-        </div>
-      </section>
+        <footer className="contact-footer">
+            <div className="contact-container">
+                <div className="contact-info">
+                    <a href="mailto:hackonauts@example.com" className="contact-item">
+                        📧 hackonauts@example.com
+                    </a>
+                    <a href="tel:+1234567890" className="contact-item">
+                        📱 +1234567890
+                    </a>
+                    <a href="https://maps.google.com" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       className="contact-item">
+                        📍 Sir M Visvesvaraya Institute of Technology, Bangalore
+                    </a>
+                </div>
+
+                <div className="social-handles">
+                    <button className="social-btn">
+                        <FontAwesomeIcon icon={faTwitter} />
+                    </button>
+                    <button className="social-btn">
+                        <FontAwesomeIcon icon={faInstagram} />
+                    </button>
+                    <button className="social-btn">
+                        <FontAwesomeIcon icon={faLinkedin} />
+                    </button>
+                    <button className="social-btn">
+                        <FontAwesomeIcon icon={faGithub} />
+                    </button>
+                </div>
+            </div>
+        </footer>
     );
 }
 
-export {ContactSection};
+export { ContactSection };

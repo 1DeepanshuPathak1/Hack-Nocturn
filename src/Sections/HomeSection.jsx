@@ -9,7 +9,7 @@ function HomeSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="glitch" data-text="Hack-O-Nauts">
+          <h1 className="glitch" data-text="Hack-Nocturn">
             Hack-Nocturn
           </h1>
           <p className="date">21-22nd February</p>

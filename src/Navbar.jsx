@@ -1,4 +1,4 @@
-
+import React, { useEffect, useState } from 'react';
 function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   
@@ -38,7 +38,7 @@ function NavBar() {
 
         {isMenuOpen && (
           <div className="pb-3 space-y-1 text-center" onClick={() => { setIsMenuOpen(!isMenuOpen)}}>
-            <a href="#land" className="block text-white">Home</a>
+            <a href="#home" className="block text-white">Home</a>
             <a href="#about" className="block text-white">About</a>
             <a href="#faq" className="block text-white">FAQ</a>
             <a href="#sponsors" className="block text-white">Sponsors</a>
