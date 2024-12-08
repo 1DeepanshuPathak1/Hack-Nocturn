@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   
@@ -9,6 +9,8 @@ function NavBar() {
           <div className="nav-links hidden md:flex">
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#prizes">Prizes</a>
             <a href="#faq">FAQ</a>
             <a href="#sponsors">Sponsors</a>
             <a href="#contact">Contact</a>
@@ -38,9 +40,11 @@ function NavBar() {
 
         {isMenuOpen && (
           <div className="pb-3 space-y-1 text-center" onClick={() => { setIsMenuOpen(!isMenuOpen)}}>
-            <a href="#home" className="block text-white">Home</a>
+            <a href='#home' className="block text-white">Home</a>
             <a href="#about" className="block text-white">About</a>
             <a href="#faq" className="block text-white">FAQ</a>
+            <a href="#timeline" className="block text-white">Timeline</a>
+            <a href="#prizes" className="block text-white">Prizes</a>
             <a href="#sponsors" className="block text-white">Sponsors</a>
             <a href="#contact" className="block text-white">Contact</a>
           </div>

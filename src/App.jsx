@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./App.css";
@@ -8,9 +8,11 @@ import { useCallback } from "react";
 import { HomeSection } from "./Sections/HomeSection"
 import { AboutSection } from "./Sections/AboutSection";
 import { FaqSection } from "./Sections/FaqSection";
-import { SponsorsSection } from "./Sections/SponsorSection";
+import { SponsorSection } from "./Sections/SponsorSection";
 import { ContactSection } from "./Sections/ContactSection";
 import { NavBar } from "./Navbar";
+import { TimelineSection } from "./Sections/TimelineSection";
+import { PrizeSection } from "./Sections/PrizeSection";
 
 function App() {
   const particlesInit = useCallback(async (engine) => {
@@ -74,24 +76,14 @@ function App() {
       <main>
         <HomeSection />
         <AboutSection />
+        <TimelineSection />
+        <PrizeSection/>
         <FaqSection />
-        <SponsorsSection />
+        <SponsorSection />
         <ContactSection />
       </main>
     </div>
   );
 }
-
-NavBar;
-
-HomeSection;
-
-AboutSection;
-
-FaqSection;
-
-SponsorsSection;
-
-ContactSection;
 
 export default App;
