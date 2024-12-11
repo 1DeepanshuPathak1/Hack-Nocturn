@@ -14,7 +14,7 @@ function HomeSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <GlitchText size="4rem" heading="</Hack-NocTurn>" />
+        <GlitchText size="3.8rem" heading="</Hack-NocTurne>" />
         <p className="date">21-22nd February</p>
         <button className="register-btn">Register Now</button>
       </motion.div>

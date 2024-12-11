@@ -10,18 +10,15 @@ function ContactSection() {
 
     useEffect(() => {
         const handleScroll = () => {
-            // Calculate if user is at the bottom of the page
-            const scrolledToBottom = 
-                window.innerHeight + window.scrollY >= 
-                document.documentElement.scrollHeight - 100; // 100px buffer
+            const scrolledToBottom =
+                window.innerHeight + window.scrollY >=
+                document.documentElement.scrollHeight - 100;
 
-            // Check if user is still trying to scroll down at the bottom
-            const isScrollingDown = 
-                window.event && 
-                window.event.wheelDelta !== undefined && 
+            const isScrollingDown =
+                window.event &&
+                window.event.wheelDelta !== undefined &&
                 window.event.wheelDelta < 0;
 
-            // Only show footer if at bottom and scrolling down
             if (scrolledToBottom && isScrollingDown) {
                 setIsVisible(true);
             } else {
@@ -45,10 +42,10 @@ function ContactSection() {
 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ 
+        const renderer = new THREE.WebGLRenderer({
             canvas: canvasRef.current,
             alpha: true,
-            antialias: true 
+            antialias: true
         });
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -108,7 +105,7 @@ function ContactSection() {
     ];
 
     return (
-        <footer 
+        <footer
             ref={footerRef}
             className={`contact-footer ${isVisible ? 'visible' : ''}`}
             style={{
@@ -116,8 +113,8 @@ function ContactSection() {
                 transition: 'transform 0.3s ease-in-out'
             }}
         >
-            <canvas 
-                ref={canvasRef} 
+            <canvas
+                ref={canvasRef}
                 className="three-js-background"
                 style={{
                     position: 'absolute',
@@ -128,26 +125,36 @@ function ContactSection() {
             />
             <div className="contact-container">
                 <div className="contact-info">
-                    <a href="mailto:hackonauts@example.com" className="contact-item">
-                        📧 hackonauts@example.com
-                    </a>
-                    <a href="tel:+1234567890" className="contact-item">
-                        📱 +1234567890
-                    </a>
-                    <a href="https://maps.google.com" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       className="contact-item">
-                        📍 Sir M Visvesvaraya Institute of Technology, Bangalore
-                    </a>
+                    <div className="image-container">
+                        <a href="https://maps.app.goo.gl/aetAnwLKbzb32tdz9" target="_blank" rel="noopener noreferrer">
+                            <img
+                                src="src\Sections\sponsors\location.jpg"
+                                alt="Location"
+                                className="location-image"
+                            />
+                        </a>
+                    </div>
+                    <div className="contact-details">
+                        <a href="mailto:hackonauts@example.com" className="contact-item">
+                            📧 hackonauts@example.com
+                        </a>
+                        <a href="tel:+1234567890" className="contact-item">
+                            📱 +1234567890
+                        </a>
+                        <a href="https://maps.app.goo.gl/aetAnwLKbzb32tdz9"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="contact-item">
+                            📍 Sir M Visvesvaraya Institute of Technology, Bangalore
+                        </a>
+                    </div>
                 </div>
-
                 <div className="social-handles">
                     {socialLinks.map((social, index) => (
-                        <a 
-                            key={index} 
-                            href={social.url} 
-                            target="_blank" 
+                        <a
+                            key={index}
+                            href={social.url}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="social-btn"
                         >

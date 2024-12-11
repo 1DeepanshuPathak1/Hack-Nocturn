@@ -52,7 +52,7 @@ function PrizeSection() {
           <PrizeCard
             icon={"🥈"}
             place={"2nd Prize"}
-            cash={"₹10,000"}
+            cash={"₹20,000"}
             credits={"+ 30,000"}
             medal={"Silver"}
             iconbackground={"bg-[#FF530A1A]"}
@@ -68,7 +68,7 @@ function PrizeSection() {
           <PrizeCard
             icon={"🏆"}
             place={"1st Prize"}
-            cash={"₹15,000"}
+            cash={"₹25,000"}
             credits={"+ 50,000"}
             medal={"Gold"}
             iconbackground={"bg-[#2C1E36]"}
@@ -81,7 +81,7 @@ function PrizeSection() {
           <PrizeCard
             icon={"🥉"}
             place={"3rd Prize"}
-            cash={"₹5,000"}
+            cash={"₹15,000"}
             credits={"+ 10,000"}
             medal={"Bronze"}
             iconbackground={"bg-[#FF530A1A]"}
