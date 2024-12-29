@@ -15,23 +15,53 @@ const ContactForm = () => {
     setStatus('Please wait...');
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          ...formData,
-          access_key: '5941483f-3ca3-4b88-9bf0-fd43644e8d24',
-          subject: 'New Submission from Web3Forms'
+      // Parallel submissions
+      const [response1, response2, response3] = await Promise.all([
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            ...formData,
+            access_key: '5941483f-3ca3-4b88-9bf0-fd43644e8d24',
+            subject: 'New Submission from Web3Forms - Primary'
+          })
+        }),
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            ...formData,
+            access_key: 'aeacbb22-1b81-4399-8bc2-37b0633ecefb',
+            subject: 'New Submission from Web3Forms - Secondary'
+          })
+        }),
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            ...formData,
+            access_key: 'Enter you access key here',
+            subject: 'New Submission from Web3Forms - Tertiary'
+          })
         })
-      });
+      ]);
 
-      const json = await response.json();
+      const json1 = await response1.json();
+      const json2 = await response2.json();
+      const json3 = await response3.json();
 
-      if (response.status === 200) {
-        setStatus(json.message);
+      // Check if both submissions were successful
+      if (response1.status === 200 && response2.status === 200 && response3.status === 200) {
+        setStatus('Message sent successfully! 😊');
         setFormData({
           first_name: '',
           last_name: '',
@@ -40,10 +70,9 @@ const ContactForm = () => {
           message: ''
         });
         setTimeout(() => setStatus(''), 5000);
-      } else {
-        setStatus(json.message);
       }
     } catch (error) {
+      console.error('Submission error:', error);
       setStatus('Something went wrong!');
     }
   };
@@ -62,7 +91,7 @@ const ContactForm = () => {
           <h1>Contact Us</h1>
           <p>Fill up the form below to send us a message.</p>
         </div>
-        
+
         <div className="form-content">
           <form onSubmit={handleSubmit}>
             <div className="input-row">
