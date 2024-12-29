@@ -23,7 +23,7 @@ const ContactForm = () => {
         },
         body: JSON.stringify({
           ...formData,
-          access_key: 'YOUR_ACCESS_KEY_HERE',
+          access_key: '5941483f-3ca3-4b88-9bf0-fd43644e8d24',
           subject: 'New Submission from Web3Forms'
         })
       });
