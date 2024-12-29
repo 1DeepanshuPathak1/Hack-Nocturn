@@ -37,7 +37,7 @@ const ContactForm = () => {
           },
           body: JSON.stringify({
             ...formData,
-            access_key: 'aeacbb22-1b81-4399-8bc2-37b0633ecefb',
+            access_key: '85d739bf-a1bf-4d42-a002-9dbb0c97844f',
             subject: 'New Submission from Web3Forms - Secondary'
           })
         }),
@@ -49,7 +49,7 @@ const ContactForm = () => {
           },
           body: JSON.stringify({
             ...formData,
-            access_key: 'Enter you access key here',
+            access_key: '85d739bf-a1bf-4d42-a002-9dbb0c97844f',
             subject: 'New Submission from Web3Forms - Tertiary'
           })
         })
