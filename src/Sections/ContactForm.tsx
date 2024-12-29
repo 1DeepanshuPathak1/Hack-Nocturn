@@ -16,7 +16,7 @@ const ContactForm = () => {
 
     try {
       // Parallel submissions
-      const [response1, response2, response3] = await Promise.all([
+      const [response1, response2] = await Promise.all([
         fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: {
@@ -38,18 +38,6 @@ const ContactForm = () => {
           body: JSON.stringify({
             ...formData,
             access_key: '85d739bf-a1bf-4d42-a002-9dbb0c97844f',
-            subject: 'New Submission from Web3Forms - Secondary'
-          })
-        }),
-        fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            ...formData,
-            access_key: '85d739bf-a1bf-4d42-a002-9dbb0c97844f',
             subject: 'New Submission from Web3Forms - Tertiary'
           })
         })
@@ -57,10 +45,9 @@ const ContactForm = () => {
 
       const json1 = await response1.json();
       const json2 = await response2.json();
-      const json3 = await response3.json();
 
       // Check if both submissions were successful
-      if (response1.status === 200 && response2.status === 200 && response3.status === 200) {
+      if (response1.status === 200 && response2.status === 200) {
         setStatus('Message sent successfully! 😊');
         setFormData({
           first_name: '',
@@ -72,7 +59,7 @@ const ContactForm = () => {
         setTimeout(() => setStatus(''), 5000);
       }
     } catch (error) {
-      console.error('Submission error:', error);
+      console.log('Submission error:', error);
       setStatus('Something went wrong!');
     }
   };
