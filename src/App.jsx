@@ -13,6 +13,7 @@ import { ContactSection } from "./Sections/ContactSection";
 import { NavBar } from "./Navbar";
 import { TimelineSection } from "./Sections/TimelineSection";
 import { PrizeSection } from "./Sections/PrizeSection";
+import ContactForm from "./Sections/ContactForm";
 
 function App() {
   const particlesInit = useCallback(async (engine) => {
@@ -80,6 +81,7 @@ function App() {
         <PrizeSection/>
         <FaqSection />
         <SponsorSection />
+        <ContactForm/>
         <ContactSection />
       </main>
     </div>
